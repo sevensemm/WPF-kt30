@@ -7,9 +7,18 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <Button Content="Назад" HorizontalAlignment="Left" Height="66" Margin="22,10,0,0" VerticalAlignment="Top" Width="219" Click="Button_Click"/>
+        <Menu Height="25" VerticalAlignment="Top">
+            <MenuItem Height="25" Header="File">
+                <MenuItem  Header="Open" Click="MenuItem_Click_1"></MenuItem>
+                <MenuItem  Header="Save"></MenuItem>
+                <Separator/>
+                <MenuItem  Header="Exit" Click="MenuItem_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <Button Content="Назад" HorizontalAlignment="Left" Height="66" Margin="10,48,0,0" VerticalAlignment="Top" Width="219" Click="Button_Click"/>
         <Button Content="Выход" HorizontalAlignment="Left" Height="47" Margin="582,376,0,0" VerticalAlignment="Top" Width="210" Click="Button_Click_1"/>
-        <Image Source="\\sysprofiles.adm.vvsu.ru\STUDENTRPROFILES$\Tsyganovsp\My Pictures\mem.jpg" HorizontalAlignment="Left" Height="318" Margin="275,21,0,0" VerticalAlignment="Top" Width="424"/>
+        <Image Name="DisplayImage" HorizontalAlignment="Left" Height="318" Margin="265,48,0,0" VerticalAlignment="Top" Width="424"/>
 
     </Grid>
 </Window>

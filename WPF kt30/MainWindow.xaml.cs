@@ -31,6 +31,6 @@ namespace WPF_kt30
             Window1 window = new Window1();
             window.Show();
             this.Close();
-        }
+        }       
     }
 }

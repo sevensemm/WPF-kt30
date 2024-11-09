@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,6 +37,24 @@ namespace WPF_kt30
             Application.Current.Shutdown();
         }
 
-        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog
+            { Filter = "Image Fales| *.jpg; *.jpeg; *.png" };
+            if (openFileDialog.ShowDialog() == true)
+            {
+                BitmapImage bitmapImage = new BitmapImage(new Uri(openFileDialog.FileName));
+                DisplayImage.Source = bitmapImage;
+            }
+            else
+            {
+                MessageBox.Show("Не выбранна картинка");
+            }
+        }
     }
 }
