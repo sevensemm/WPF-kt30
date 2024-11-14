@@ -6,7 +6,12 @@
         xmlns:local="clr-namespace:WPF_kt30"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="310" Height="97" Margin="224,155,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click"></Button>
+    <Grid Background="Black">
+        <Button Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="232" Height="67" Margin="536,335,0,0" RenderTransformOrigin="0.5,0.5" Click="Button_Click"></Button>
+        <TextBlock FontSize="25" Foreground="Blue"  x:Name="txtDisplay" HorizontalAlignment="Left" Height="104" Margin="203,81,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="305"><Run Text="Введите "/><Run Text="Login &amp; Password pg"/></TextBlock>
+        <TextBox Name="userTxt" TextWrapping="Wrap" FontSize="25" HorizontalAlignment="Left" Height="45" Margin="250,203,0,0" Text="Nikitka228" VerticalAlignment="Top" Width="160"/>
+        <PasswordBox Name="passwTxt" FontSize="25" HorizontalAlignment="Left" Height="38" Margin="250,268,0,0" VerticalAlignment="Top" Width="160"/>
+        <Button Content="Войти" FontSize="25" HorizontalAlignment="Left" Height="47" Margin="465,268,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click_1"/>
+
     </Grid>
 </Window>

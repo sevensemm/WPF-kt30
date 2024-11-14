@@ -20,17 +20,34 @@ namespace WPF_kt30
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string pass = "1234";
+        private string inputPass = "";
+
         public MainWindow()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Некит крутой");
+        {            
             Window1 window = new Window1();
             window.Show();
             this.Close();
-        }       
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            inputPass = passwTxt.ToString();
+            if (inputPass == pass)
+            {
+                txtDisplay.Text = "Welkom";
+                passwTxt.Foreground = Brushes.Green;
+            }
+            else
+            {
+                MessageBox.Show("Ты кто?");
+                passwTxt.Foreground = Brushes.Red;
+            }
+        }
     }
 }
