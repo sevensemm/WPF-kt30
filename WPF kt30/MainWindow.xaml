@@ -12,6 +12,7 @@
         <TextBox Name="userTxt" TextWrapping="Wrap" FontSize="25" HorizontalAlignment="Left" Height="45" Margin="250,203,0,0" Text="Nikitka228" VerticalAlignment="Top" Width="160"/>
         <PasswordBox Name="passwTxt" FontSize="25" HorizontalAlignment="Left" Height="38" Margin="250,268,0,0" VerticalAlignment="Top" Width="160"/>
         <Button Content="Войти" FontSize="25" HorizontalAlignment="Left" Height="47" Margin="465,268,0,0" VerticalAlignment="Top" Width="103" Click="Button_Click_1"/>
+        <Button Content="ComboBox" HorizontalAlignment="Left" Height="31" Margin="644,25,0,0" VerticalAlignment="Top" Width="124" Click="Button_Click_2"/>
 
     </Grid>
 </Window>

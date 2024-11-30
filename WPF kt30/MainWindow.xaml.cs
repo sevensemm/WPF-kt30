@@ -49,5 +49,12 @@ namespace WPF_kt30
                 passwTxt.Foreground = Brushes.Red;
             }
         }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            KomboBox km = new KomboBox();
+            km.Show();
+            this.Close();
+        }
     }
 }

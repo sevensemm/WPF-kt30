@@ -58,10 +58,17 @@
     <Compile Include="Kalkulator.xaml.cs">
       <DependentUpon>Kalkulator.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KomboBox.xaml.cs">
+      <DependentUpon>KomboBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="Kalkulator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KomboBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
