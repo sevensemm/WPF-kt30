@@ -44,5 +44,10 @@ namespace WPF_kt30
             BitmapImage bitmap = new BitmapImage(new Uri(imagePath));
             DisplayImage.Source = bitmap;
         }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

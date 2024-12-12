@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="KomboBox" Height="450" Width="800">
     <Grid>
-        <ComboBox Margin="199,10,191,365" >
+        <ComboBox Margin="199,10,191,365" SelectionChanged="ComboBox_SelectionChanged" >
 
             <ComboBoxItem Selected="ComboBoxItem_Selected">
                 <StackPanel>
