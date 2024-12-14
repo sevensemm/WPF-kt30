@@ -19,9 +19,11 @@ namespace WPF_kt30
     /// </summary>
     public partial class Stack_panale : Window
     {
+        
         public Stack_panale()
         {
             InitializeComponent();
+            
         }
 
         private void TreeViewItem_Selected(object sender, RoutedEventArgs e)
@@ -37,10 +39,52 @@ namespace WPF_kt30
             MessageBox.Show("Концерт лил пипа " + date.SelectedDate.Value.ToShortDateString() + " недоступен(((");
         }
 
-        private void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
+        public void Calendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
         {
+            
             Calendar cal = (Calendar)sender;
-            MessageBox.Show("Концерт лил пипа " + cal.SelectedDate.Value.ToShortDateString() + " недоступен(((");
+            string now_data = cal.SelectedDate.Value.ToShortDateString();
+            sent(now_data);
+            //MessageBox.Show("Концерт лил пипа " + cal.SelectedDate.Value.ToShortDateString() + " недоступен(((");
+
+
+        }
+        List<string> data = new List<string>();
+        List<string> text = new List<string>();
+        int a = 0;
+
+        public void sent(string now_data)
+        {
+            for (int i = 0; i < data.Count; i++)
+            {                
+                if (data[i] == now_data)
+                {
+                    text_box.Text = text[i];
+                    goto fo;
+                }                          
+            }
+            fo:
+            data.Add(now_data);
+            text.Add(input_box.Text);
+            input_box.Text = "";
+            text_box.Text = text[a];
+            a++;
+            /*if (text[a] == text_box.Text)
+            {
+                text_box.Text = text[a];
+            }
+            else
+            {
+                text[a] = text_box.Text;
+            }*/
+        }
+
+
+
+
+        public void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
