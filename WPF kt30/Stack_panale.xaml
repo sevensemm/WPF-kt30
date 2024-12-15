@@ -28,6 +28,6 @@
         </Calendar>
         <TextBlock Name="text_box" HorizontalAlignment="Left" Height="26" Margin="41,0,0,0" TextWrapping="Wrap" Text="" Width="612"/>
         <TextBox Name="input_box" HorizontalAlignment="Left" Height="40" Margin="41,0,0,0" TextWrapping="Wrap" Text="" Width="199"/>
-        <Button Content="Запомнить текст" HorizontalAlignment="Left" Height="37" Margin="511,0,0,0" Width="102" Click="Button_Click"/>
+        <Button Content="Перезаписать" HorizontalAlignment="Left" Height="37" Margin="511,0,0,0" Width="102" Click="Button_Click"/>
     </StackPanel>
 </Window>

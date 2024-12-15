@@ -52,7 +52,9 @@ namespace WPF_kt30
         List<string> data = new List<string>();
         List<string> text = new List<string>();
         int a = 0;
+        int vrem_a;
 
+        bool b = true;
         public void sent(string now_data)
         {
             for (int i = 0; i < data.Count; i++)
@@ -60,31 +62,28 @@ namespace WPF_kt30
                 if (data[i] == now_data)
                 {
                     text_box.Text = text[i];
-                    goto fo;
+                    vrem_a = i;
+                    b = false;
                 }                          
             }
-            fo:
-            data.Add(now_data);
-            text.Add(input_box.Text);
-            input_box.Text = "";
-            text_box.Text = text[a];
-            a++;
-            /*if (text[a] == text_box.Text)
+            if (b == true)
             {
+                data.Add(now_data);
+                text.Add(input_box.Text);
+                input_box.Text = "";
                 text_box.Text = text[a];
+                a++;
             }
             else
             {
-                text[a] = text_box.Text;
-            }*/
+                b = true;
+            }            
         }
-
-
-
-
         public void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            text[vrem_a] = input_box.Text;
+            text_box.Text = text[vrem_a];
+            input_box.Text = "";
         }
     }
 }
